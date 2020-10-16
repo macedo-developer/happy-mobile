@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "happy_mobile",
-    "slug": "happy_mobile",
+    "name": "happy-mobile",
+    "slug": "happy-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
