@@ -25,12 +25,30 @@ export default function Routes() {
           options={{
             headerShown: true,
             header: () => {
-              return <Header title="Orfanato" />;
+              return <Header showCancel={false} title="Orfanato" />;
             },
           }}
         />
-        <Screen name="SelectMapPosition" component={SelectMapPosition} />
-        <Screen name="OrphanageData" component={OrphanageData} />
+        <Screen
+          name="SelectMapPosition"
+          component={SelectMapPosition}
+          options={{
+            headerShown: true,
+            header: () => {
+              return <Header title="Selecione no mapa" />;
+            },
+          }}
+        />
+        <Screen
+          name="OrphanageData"
+          component={OrphanageData}
+          options={{
+            headerShown: true,
+            header: () => {
+              return <Header title="Informe os dados" />;
+            },
+          }}
+        />
       </Navigator>
     </NavigationContainer>
   );
