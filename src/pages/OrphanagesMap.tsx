@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 
 import api from "../services/api";
@@ -21,7 +21,7 @@ export default function OrphanagesMap() {
   const navigation = useNavigation();
   const [orphanages, setOrphanages] = useState<OrphanageProps[]>([]);
 
-  useEffect(() => {
+  useFocusEffect(() => {
     api.get("/orphanages").then((response) => {
       setOrphanages(response.data);
     });
