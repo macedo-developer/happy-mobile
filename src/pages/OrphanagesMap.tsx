@@ -10,6 +10,7 @@ import { Feather } from "@expo/vector-icons";
 
 import mapMarkerImg from "../images/map-marker.png";
 import { RectButton } from "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 
 interface OrphanageProps {
   id: number;
@@ -107,6 +108,7 @@ export default function OrphanagesMap() {
             <Feather name="plus" size={20} color="#fff" />
           </RectButton>
         </View>
+        <StatusBar style="auto" />
       </View>
     );
 }
